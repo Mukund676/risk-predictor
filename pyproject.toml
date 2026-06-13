@@ -1,0 +1,12 @@
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "risk-predictor-core"
+version = "0.1.0"
+description = "PyO3 boundary for the Investment Banking Risk & Pricing Predictor"
+requires-python = ">=3.11"
+
+[tool.maturin]
+module-name = "risk_predictor_core"
