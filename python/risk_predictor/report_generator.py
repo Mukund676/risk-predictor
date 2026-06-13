@@ -9,7 +9,7 @@ from .schemas import PortfolioRiskResponse
 
 
 class ExecutiveReportGenerator:
-    def __init__(self, model: str = "gemini-2.5-flash") -> None:
+    def __init__(self, model: str = "gemini-3.5-flash") -> None:
         api_key = os.getenv("GEMINI_API_KEY")
         if not api_key:
             raise ValueError("GEMINI_API_KEY is not set")

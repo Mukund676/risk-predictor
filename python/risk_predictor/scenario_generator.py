@@ -18,7 +18,7 @@ class ScenarioExtraction(BaseModel):
 
 
 class AIScenarioGenerator:
-    def __init__(self, model: str = "gemini-2.5-flash") -> None:
+    def __init__(self, model: str = "gemini-3.5-flash") -> None:
         self._model = model
 
     def generate_scenario(self, prompt_text: str) -> ScenarioSpec:
@@ -46,7 +46,7 @@ class AIScenarioGenerator:
         # --- THE FIX: Normalize the volatility decimal ---
         raw_vol_shift = extraction.volatility_shift_pct
         normalized_vol_shift = raw_vol_shift / 100.0 if abs(raw_vol_shift) > 1.0 else raw_vol_shift
-        
+
 
         return ScenarioSpec(
             scenario_id="scenario-ai-generated",
